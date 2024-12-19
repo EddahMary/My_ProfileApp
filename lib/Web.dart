@@ -10,7 +10,8 @@ const WebPage ({super.key});
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(style: TextStyle(fontStyle: FontStyle.italic, fontSize: 20, color: Colors.deepOrange, fontWeight: FontWeight.w500), "Web Developmemt"),
+          leading: IconButton(onPressed: (){ Navigator.pop(context);}, icon: const Icon(Icons.arrow_back)),
+          title: const Text(style: TextStyle(fontStyle: FontStyle.italic, fontSize: 20, color: Colors.black87, fontWeight: FontWeight.w500), "Web Developmemt"),
 
         ),
         body: const Padding(

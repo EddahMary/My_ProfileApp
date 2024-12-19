@@ -10,7 +10,8 @@ class UiUx extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(style: TextStyle(fontStyle: FontStyle.italic, fontSize: 20, color: Colors.deepOrange, fontWeight: FontWeight.w500), "UI/UX"),
+          leading: IconButton(onPressed: (){ Navigator.pop(context);}, icon: const Icon(Icons.arrow_back)),
+          title: const Text(style: TextStyle(fontStyle: FontStyle.italic, fontSize: 20, color: Colors.pinkAccent, fontWeight: FontWeight.w500), "UI/UX"),
 
         ),
         body: const Padding(

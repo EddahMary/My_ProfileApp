@@ -10,34 +10,14 @@ class AboutMe extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.only(top: 30.0),
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Text("Who's Norlan?", textDirection: TextDirection.ltr, textAlign: TextAlign.start, style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: Colors.indigo),),
-              ),
-              const Text("Intro"),
-              const Text("Norlan a motivated Junior Software Developer passionate about problem-solving, he enjoys working collaboratively and is always eager to learn new technologies. With a strong commitment to writing clean, efficient code, Norlan is excited to contribute to innovative software solutions and continue growing in the field of software development."),
-            Expanded(child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(width:80, height: 40, child: FloatingActionButton(onPressed: () {Get.to(const home());}, backgroundColor: Colors.lightBlueAccent, child: const Text("Back"), ))
-              ],
-            ))
-            ]
-
-          ),
-        )
-
-
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20), "Who's Norlan?"),
+        leading: IconButton(onPressed: (){ Navigator.pop(context);}, icon: const Icon(Icons.arrow_back)),
       ),
+      body: const Column(children: [Text("I am a motivated Junior Software Developer, always eager to learn new technologies. I hava a strong commitment to writing clean and efficient code aimed at solving real-world problems. I am excited to contribute to innovative software solutions as I grow in the field of software development and most especially data analysis."),],),
     );
+    
     // TODO: implement build
     throw UnimplementedError();
 
